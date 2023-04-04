@@ -1,0 +1,37 @@
+
+    <div class="login-container" >
+        
+      <div class="login-content">
+       
+        <mat-card>
+          <form [formGroup]="loginForm" novalidate (ngSubmit)="onSubmit()">
+            <div fxFlex="100%" class="flex-p" class="snapshot" fxLayout.xs="column" fxLayoutGap="2%">
+            <mat-form-field>
+             
+              <input autofocus  class="w-100 " type="text" matInput placeholder="Name" formControlName="username">
+            </mat-form-field>
+</div>
+            <mat-form-field>
+         
+              <input type="password" autocomplete="false" matInput placeholder="Age" formControlName="password">
+            </mat-form-field>
+
+            <mat-form-field fxFlex="33.33">
+              <mat-label>Select Gender</mat-label>
+              <mat-select placeholder="Select Gender" name="Gender" 
+              required>
+                <mat-option value="1">Male</mat-option>
+                <mat-option value="2">Female</mat-option>
+                <mat-option value="3">Transgender</mat-option>
+              </mat-select>
+            
+            </mat-form-field>
+            <div fxFlex="100%" class="flex-p" class="snapshot" fxLayout.xs="column" fxLayoutGap="2%">
+            <button type="submit"    [disabled]="!loginForm.valid" mat-raised-button color="accent">Login</button>
+            </div>
+        
+          </form>
+        </mat-card>
+      </div>
+    </div>
+  

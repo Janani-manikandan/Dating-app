@@ -1,0 +1,20 @@
+ <div class="login-container" >
+        
+      <div class="login-content">
+       
+        <mat-card>
+          <form [formGroup]="loginForm" novalidate (ngSubmit)="onSubmit()">
+            <div fxFlex="100%" class="flex-p" class="snapshot" fxLayout.xs="column" fxLayoutGap="2%">
+            <mat-form-field>
+             
+              <input autofocus  class="w-100 " numbersOnly type="text" matInput placeholder="phone number" formControlName="username">
+            </mat-form-field>
+</div>
+<div fxFlex="100%" class="flex-p" class="snapshot" fxLayout.xs="column" fxLayoutGap="2%">
+    <button type="submit" (click)="getOtp()" mat-raised-button color="accent">SEND OTP</button>
+    
+    </div>
+            </form>
+            </mat-card>
+            </div>
+            </div>
